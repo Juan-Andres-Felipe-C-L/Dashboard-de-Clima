@@ -1,3 +1,87 @@
+/*Buena noche instructor Alejandro, gracias por haberme compartido el código con el que trató de explicarme esta actividad,
+gracias a eso pude hacerla. También, debo de admitir que, para terminar este código de una mnera agil, debí hacer uso de la IA
+Chat GPT. Buen resto de fin de semana.*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #f1f5f9;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Componentes de búsqueda */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 250px;
+}
+
+.search-box button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #0ea5e9;
+}
+
+/* Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Card individual */
+.card {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Texto dentro de tarjetas */
+.card strong {
+    color: #38bdf8;
+}
+
+/* Estilos de Spinner */
 .spinner {
     width: 50px;
     height: 50px;
@@ -6,8 +90,7 @@
     border-radius: 50%;
     animation: spin 1s linear infinite;
     position: absolute;
-    left: 47%;
-    top: 45%;
+    top: 50%;
 }
 
 .hide {
@@ -21,5 +104,35 @@
 @keyframes spin {
     to {
         transform: rotate(360deg);
+    }
+}
+
+/* Diseño responsivo para MÓVIL */
+@media (max-width: 600px) {
+    .search-box {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Diseño responsivo para TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Diseño responsivo para ESCRITORIO */
+@media (min-width: 1025px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

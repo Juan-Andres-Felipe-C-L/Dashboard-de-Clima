@@ -7,11 +7,19 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>Dashboard del Clima</h1>
-    <input id="ciudad-input" type="text" placeholder="Escriba aquí la ciudad que quiera consultar.">
-    <button id="buscar-btn">Buscar</button>
-    <span id="time"></span>
-    <div id="spinner" class="spinner hide"></div>
+    <div class="container">
+        <h1>Dashboard del Clima</h1>
+
+        <div class="search-box">
+            <input id="ciudad-input" type="text" placeholder="Escriba aquí una ciudad.">
+            <button id="buscar-btn">Buscar</button>
+        </div>
+
+        <div id="spinner" class="spinner hide"></div>
+
+        <div id="time" class="cards-container"></div>
+    </div>
+
     <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
